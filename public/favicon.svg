@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SPOTLIGHT">
+  <rect width="64" height="64" fill="#080808"/>
+  <path d="M10 23 46 14v36L10 41z" fill="#D8A84E"/>
+  <path d="M18 27h27v10H18z" fill="#F5F1E8"/>
+  <path d="M50 24h4v16h-4z" fill="#F0D28A"/>
+</svg>

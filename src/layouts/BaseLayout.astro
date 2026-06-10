@@ -4,12 +4,13 @@ import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
 const {
-  title = "SPOTLIGHT Dance Film Festival",
-  description = "An independent dance film festival based in Frankfurt am Main, Germany, connecting dance, film, music, culture, and community.",
+  title = "SPOTLIGHT Dance Film Festival — Frankfurt am Main",
+  description = "SPOTLIGHT Dance Film Festival is an independent dance film festival based in Frankfurt am Main, Germany, connecting dance, film, music, culture, and community. After a sold-out first edition in 2026, the next edition is planned for spring 2027.",
   image = "/images/hero-cinema-stage.jpg"
 } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://spotlight-dance-film-festival.netlify.app");
-const ogImage = new URL(image, Astro.site ?? "https://spotlight-dance-film-festival.netlify.app");
+const siteUrl = Astro.site ?? "https://spotlight-film-festival.netlify.app";
+const canonical = new URL(Astro.url.pathname, siteUrl);
+const ogImage = new URL(image, siteUrl);
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Festival",
@@ -52,6 +53,7 @@ const structuredData = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     <meta name="robots" content="index,follow" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preload" as="image" href="/images/hero-cinema-stage.jpg" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
