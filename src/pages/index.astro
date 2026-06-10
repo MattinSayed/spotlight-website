@@ -39,28 +39,35 @@ const partnerCards = [
 ];
 
 const gallery = [
-  { src: "/images/first-edition-group.jpg", alt: "Artists and filmmakers gathered on stage in front of the SPOTLIGHT projection after the first edition.", caption: "First edition artists and filmmakers" },
-  { src: "/images/community-group.jpg", alt: "Festival participants smiling together on stage in the cinema with the SPOTLIGHT logo behind them.", caption: "Community after the screening" },
-  { src: "/images/spotlight-projection.jpg", alt: "Close crop of the projected SPOTLIGHT logo on a cinema screen.", caption: "Projected festival identity" },
-  { src: "/images/malsehn-exterior.jpg", alt: "Black and white photo outside Kino MalSehn in Frankfurt am Main.", caption: "MalSehn cinema, Frankfurt" }
+  { src: "/images/first-edition-group.jpg", width: 2200, height: 1650, alt: "Artists and filmmakers gathered on stage in front of the SPOTLIGHT projection after the first edition.", caption: "First edition artists and filmmakers" },
+  { src: "/images/community-group.jpg", width: 1800, height: 1199, alt: "Festival participants smiling together on stage in the cinema with the SPOTLIGHT logo behind them.", caption: "Community after the screening" },
+  { src: "/images/spotlight-projection.jpg", width: 1200, height: 1600, alt: "Close crop of the projected SPOTLIGHT logo on a cinema screen.", caption: "Projected festival identity" },
+  { src: "/images/malsehn-exterior.jpg", width: 1800, height: 1350, alt: "Black and white photo outside Kino MalSehn in Frankfurt am Main.", caption: "MalSehn cinema, Frankfurt" }
 ];
 
 const team = ["Isi Dyson", "Mattin Sayed", "Samuil Rahman", "Tizian Arnholdt"];
+const contactEmail = "spotlight.filmfestival.germany@gmail.com";
+const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrMG91YmRsbWw2bw==";
 ---
 
 <BaseLayout>
   <section id="home" class="hero-section">
-    <img class="hero-image" src="/images/hero-cinema-stage.jpg" alt="SPOTLIGHT first edition stage at MalSehn cinema with artists, audience members, and the festival logo projected on screen." />
+    <img class="hero-image" src="/images/hero-cinema-stage.jpg" alt="SPOTLIGHT first edition stage at MalSehn cinema with artists, audience members, and the festival logo projected on screen." width="2400" height="1800" fetchpriority="high" decoding="async" />
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="eyebrow">Frankfurt am Main, Germany</p>
       <h1>SPOTLIGHT Dance Film Festival</h1>
       <p class="hero-lede">A dance film festival connecting dance, film, music, culture, and community.</p>
       <p>SPOTLIGHT is an independent film festival dedicated to dance film and movement-based visual storytelling. After a sold-out first edition in March 2026, SPOTLIGHT is preparing its next edition for spring 2027 in Frankfurt am Main.</p>
+      <div class="hero-proof" aria-label="Festival proof points">
+        <span>Independent</span>
+        <span>Curated</span>
+        <span>Sold-out first edition</span>
+      </div>
       <div class="button-row">
         <a class="button primary" href="#about">Explore the Festival</a>
         <a class="button secondary" href="#partners">Partner With Us</a>
-        <a class="button ghost" href="mailto:spotlight.filmfestival.germany@gmail.com">Contact SPOTLIGHT</a>
+        <a class="button ghost" href={`mailto:${contactEmail}`}>Contact SPOTLIGHT</a>
       </div>
     </div>
     <div class="hero-stats">
@@ -81,7 +88,7 @@ const team = ["Isi Dyson", "Mattin Sayed", "Samuil Rahman", "Tizian Arnholdt"];
         <blockquote>Dance film deserves to be experienced collectively — on the big screen, with full attention.</blockquote>
       </div>
       <div class="image-panel">
-        <img src="/images/spotlight-projection.jpg" alt="The SPOTLIGHT logo projected warmly across a cinema screen." loading="lazy" />
+        <img src="/images/spotlight-projection.jpg" alt="The SPOTLIGHT logo projected warmly across a cinema screen." width="1200" height="1600" loading="lazy" decoding="async" />
       </div>
     </div>
     <FeatureCards items={aboutCards} />
@@ -90,7 +97,7 @@ const team = ["Isi Dyson", "Mattin Sayed", "Samuil Rahman", "Tizian Arnholdt"];
   <section id="edition-2026" class="section proof-section">
     <div class="split-layout">
       <div class="image-panel large">
-        <img src="/images/first-edition-group.jpg" alt="Artists and filmmakers on the SPOTLIGHT stage at the sold-out March 2026 first edition." loading="lazy" />
+        <img src="/images/first-edition-group.jpg" alt="Artists and filmmakers on the SPOTLIGHT stage at the sold-out March 2026 first edition." width="2200" height="1650" loading="lazy" decoding="async" />
       </div>
       <div class="copy">
         <p class="eyebrow">First Edition — March 2026</p>
@@ -149,9 +156,15 @@ const team = ["Isi Dyson", "Mattin Sayed", "Samuil Rahman", "Tizian Arnholdt"];
         <p>The next edition is planned for a professional cinema environment in Frankfurt am Main. SPOTLIGHT is currently exploring suitable cinema and cultural venue partnerships for spring 2027.</p>
       </article>
     </div>
+    <div class="credibility-strip" aria-label="Partner-facing credibility points">
+      <span>Real cinema event</span>
+      <span>International submissions</span>
+      <span>Local creative audience</span>
+      <span>Conservative public reach wording</span>
+    </div>
     <div class="cta-band">
       <p>Interested in partnering with SPOTLIGHT?</p>
-      <a class="button primary" href="mailto:spotlight.filmfestival.germany@gmail.com">Partner With SPOTLIGHT</a>
+      <a class="button primary" href={`mailto:${contactEmail}`}>Partner With SPOTLIGHT</a>
     </div>
   </section>
 
@@ -162,7 +175,10 @@ const team = ["Isi Dyson", "Mattin Sayed", "Samuil Rahman", "Tizian Arnholdt"];
         <h2>Independent, Frankfurt-based, and ready to talk.</h2>
         <p>SPOTLIGHT was created by an independent team from Frankfurt connected through dance and film. The team brings experience in dance culture, video production, event organization, curation, and community building.</p>
         <p>For cinema partnerships, funding, press, collaborations, and artist inquiries, please contact us.</p>
-        <a class="button primary" href="mailto:spotlight.filmfestival.germany@gmail.com">Contact SPOTLIGHT</a>
+        <div class="button-row contact-actions">
+          <a class="button primary" href={`mailto:${contactEmail}`}>Contact SPOTLIGHT</a>
+          <a class="button secondary" href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
       </div>
       <aside class="contact-card">
         <h3>Team</h3>
@@ -170,8 +186,8 @@ const team = ["Isi Dyson", "Mattin Sayed", "Samuil Rahman", "Tizian Arnholdt"];
           {team.map((name) => <li>{name}</li>)}
         </ul>
         <div class="contact-lines">
-          <a href="mailto:spotlight.filmfestival.germany@gmail.com">spotlight.filmfestival.germany@gmail.com</a>
-          <span>Instagram: @yourhandle</span>
+          <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram: @spotlightfilmfestival</a>
           <span>Frankfurt am Main, Germany</span>
         </div>
       </aside>

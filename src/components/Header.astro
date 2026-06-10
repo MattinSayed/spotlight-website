@@ -6,6 +6,7 @@ const links = [
   ["Partners", "#partners"],
   ["Contact", "#contact"]
 ];
+const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrMG91YmRsbWw2bw==";
 ---
 
 <header class="site-header" aria-label="Primary navigation">
@@ -16,11 +17,13 @@ const links = [
   <nav class="desktop-nav">
     {links.map(([label, href]) => <a href={href}>{label}</a>)}
   </nav>
+  <a class="social-link" href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="SPOTLIGHT on Instagram">Instagram</a>
   <a class="nav-cta" href="#partners">Partner With Us</a>
   <details class="mobile-nav">
     <summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
     <div class="mobile-nav-panel">
       {links.map(([label, href]) => <a href={href}>{label}</a>)}
+      <a href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
       <a class="mobile-cta" href="#partners">Partner With Us</a>
     </div>
   </details>
