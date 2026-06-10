@@ -598,7 +598,7 @@ blockquote {
 }
 
 .image-grid figure:nth-child(3) img {
-  object-position: 48% center;
+  object-position: center 28%;
 }
 
 .image-grid figure:nth-child(4) img {
