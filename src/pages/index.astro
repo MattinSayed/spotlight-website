@@ -6,8 +6,8 @@ import ImageGrid from "../components/ImageGrid.astro";
 
 const heroStats = [
   { value: "March 2026", label: "first edition" },
-  { value: "17", label: "curated films" },
-  { value: "5", label: "continents represented" },
+  { value: "17 curated films", label: "selected program" },
+  { value: "5 continents", label: "represented" },
   { value: "Sold out", label: "80 visitors plus waiting list" }
 ];
 
@@ -71,20 +71,12 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
       <p class="eyebrow">Frankfurt am Main, Germany · Spring 2027 in preparation</p>
       <h1>SPOTLIGHT Dance Film Festival</h1>
       <p class="hero-lede">An independent dance film festival based in Frankfurt am Main, bringing movement-based visual storytelling to the big screen.</p>
-      <p>SPOTLIGHT creates a platform for local and international artists whose work brings movement, image, sound, rhythm, and emotion together on screen. After a sold-out first edition in March 2026, the next edition is planned for spring 2027.</p>
-      <div class="hero-proof" aria-label="Festival proof points">
-        <span>Independent</span>
-        <span>Big-screen storytelling</span>
-        <span>Sold-out first edition</span>
+      <div class="hero-stats">
+        <StatGrid stats={heroStats} />
       </div>
       <div class="button-row">
-        <a class="button primary" href="#about">Explore the Festival</a>
-        <a class="button secondary" href="#partners">Partner With Us</a>
-        <a class="button ghost" href={`mailto:${contactEmail}`}>Contact SPOTLIGHT</a>
+        <a class="button primary" href="#about">Explore the festival</a>
       </div>
-    </div>
-    <div class="hero-stats">
-      <StatGrid stats={heroStats} />
     </div>
   </section>
 
@@ -131,7 +123,7 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
   <section id="vision-2027" class="section vision-section">
     <div class="vision-card">
       <div>
-        <p class="eyebrow">Vision 2027</p>
+        <p class="eyebrow">2027 Vision</p>
         <h2>Coming Spring 2027</h2>
         <p>For the next edition, SPOTLIGHT is planned as a larger one-day cinema event in Frankfurt am Main in spring 2027.</p>
         <p>The 2027 edition is currently in preparation and will build on the success of the first event through a larger cinema setting, stronger partnerships, international networking, and a more developed festival experience.</p>
