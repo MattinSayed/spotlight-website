@@ -34,8 +34,8 @@ const visionCards = [
 
 const partnerCards = [
   { kicker: "Festival", title: "What SPOTLIGHT Brings", text: "Concept, artistic direction, curation, artist communication, organization, marketing, content production, hosting, and documentation." },
-  { kicker: "Value", title: "Why Partner", text: "Access to new creative audiences, cultural positioning, strong event content, potential press attention, and a credible emerging festival format." },
-  { kicker: "Audience", title: "Who It Reaches", text: "Dancers, filmmakers, choreographers, musicians, visual artists, students, young cultural audiences, and Frankfurt creative communities." }
+  { kicker: "Value", title: "Why Partner", text: "A shared cinema setting where dance films can be experienced with attention, scale, and an engaged audience beyond online platforms." },
+  { kicker: "Audience", title: "Who It Reaches", text: "While SPOTLIGHT is rooted in Frankfurt's creative scene, the festival also attracts artists, guests, and audiences from outside the city through its international film selection and wider creative network." }
 ];
 
 const gallery = [
@@ -126,8 +126,8 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
   <section id="partners" class="section partners-section">
     <div class="section-heading">
       <p class="eyebrow">For Cinemas & Partners</p>
-      <h2>A serious cultural project with a real first audience.</h2>
-      <p>SPOTLIGHT offers cinemas and cultural partners the opportunity to host a community-driven cultural event with local relevance and international reach.</p>
+      <h2>A serious cultural project with a focused cinema audience.</h2>
+      <p>SPOTLIGHT offers cinemas and cultural partners the opportunity to host a community-driven cultural event with local relevance, international artists, and a wider creative network.</p>
     </div>
     <FeatureCards items={partnerCards} />
     <div class="partner-columns">
@@ -139,7 +139,9 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
           <li>Revenue share</li>
           <li>Co-hosted event</li>
           <li>Sponsorship</li>
-          <li>Funding, media, or community partnership</li>
+          <li>Funding partnership</li>
+          <li>Media partnership</li>
+          <li>Community partnership</li>
         </ul>
       </article>
       <article>
@@ -156,7 +158,7 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
         <p>Interested in hosting or supporting the 2027 edition?</p>
         <span>We are currently speaking with cinemas, cultural partners, sponsors, and funding bodies for the next edition in Frankfurt am Main.</span>
       </div>
-      <a class="button primary" href={`mailto:${contactEmail}`}>Get in Touch</a>
+      <a class="button primary" href={`mailto:${contactEmail}`}>Start a conversation</a>
     </div>
   </section>
 
@@ -169,11 +171,11 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
         <p>For partnerships, press, funding, collaborations, and artist inquiries, please contact us.</p>
         <div class="button-row contact-actions">
           <a class="button primary" href={`mailto:${contactEmail}`}>Contact SPOTLIGHT</a>
-          <a class="button secondary" href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </div>
       <aside class="contact-card">
         <h3>Team</h3>
+        <!-- TODO: Add confirmed team roles once agreed by the team. -->
         <ul class="team-list">
           {team.map((name) => <li>{name}</li>)}
         </ul>
