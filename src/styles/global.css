@@ -145,14 +145,14 @@ summary:focus-visible,
 .brand {
   display: inline-flex;
   align-items: center;
-  min-width: 132px;
+  min-width: 128px;
+  padding-left: clamp(10px, 1.2vw, 18px);
 }
 
 .brand-logo {
-  width: clamp(132px, 13vw, 176px);
+  width: clamp(110px, 10vw, 138px);
   height: auto;
-  max-height: 42px;
-  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .desktop-nav {
@@ -170,11 +170,12 @@ summary:focus-visible,
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
 .desktop-nav a:hover,
 .site-footer a:hover,
-.social-link:hover {
+.mobile-nav-panel a:hover {
   color: var(--accent);
 }
 
@@ -189,8 +190,22 @@ summary:focus-visible,
   color: var(--accent);
 }
 
+.nav-cta:hover,
+.nav-cta:focus-visible {
+  border-color: var(--text);
+  background: var(--text);
+  color: #080808;
+}
+
 .social-link {
   border-color: rgba(255, 255, 255, 0.12);
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #080808;
 }
 
 .mobile-nav {
@@ -245,6 +260,11 @@ summary:focus-visible,
   margin-top: 6px;
   border-top: 1px solid var(--border);
   color: var(--accent) !important;
+}
+
+.mobile-cta:hover,
+.mobile-cta:focus-visible {
+  color: var(--text) !important;
 }
 
 .hero-section {
@@ -374,11 +394,8 @@ summary:focus-visible,
   font-size: 0.86rem;
   font-weight: 800;
   letter-spacing: 0.04em;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
+  text-align: center;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
 .button.primary {
@@ -387,9 +404,25 @@ summary:focus-visible,
   color: #130f08;
 }
 
+.button.primary:hover,
+.button.primary:focus-visible {
+  border-color: var(--text);
+  background: var(--text);
+  color: #080808;
+}
+
 .button.secondary {
   border-color: rgba(201, 154, 62, 0.44);
   color: var(--accent);
+}
+
+.button.secondary:hover,
+.button.secondary:focus-visible,
+.button.ghost:hover,
+.button.ghost:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #080808;
 }
 
 .button.ghost {
@@ -786,6 +819,12 @@ blockquote {
   background: rgba(201, 154, 62, 0.07);
 }
 
+.cta-band .button {
+  flex: 0 0 auto;
+  padding-inline: 24px;
+  white-space: nowrap;
+}
+
 .cta-band p {
   margin: 0;
   color: var(--text);
@@ -916,6 +955,16 @@ blockquote {
     inset: 10px 10px auto;
     width: calc(100% - 20px);
     border-radius: 8px;
+    padding-left: 8px;
+  }
+
+  .brand {
+    min-width: 112px;
+    padding-left: 8px;
+  }
+
+  .brand-logo {
+    width: clamp(106px, 31vw, 128px);
   }
 
   .hero-section {
@@ -952,6 +1001,12 @@ blockquote {
 
   .button {
     width: 100%;
+  }
+
+  .cta-band .button {
+    align-self: stretch;
+    width: 100%;
+    white-space: normal;
   }
 
   .section {
