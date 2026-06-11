@@ -323,28 +323,31 @@ summary:focus-visible,
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  margin: 0 0 26px;
+  margin: 0 0 28px;
 }
 
 .proof-markers span {
   display: grid;
-  gap: 6px;
-  min-height: 96px;
+  gap: 10px;
+  min-height: 128px;
   align-content: center;
-  padding: 18px;
-  border: 1px solid rgba(201, 154, 62, 0.24);
+  padding: clamp(20px, 2.2vw, 28px);
+  border: 1px solid rgba(201, 154, 62, 0.34);
   border-radius: 8px;
-  background: rgba(201, 154, 62, 0.07);
+  background:
+    linear-gradient(180deg, rgba(201, 154, 62, 0.11), rgba(201, 154, 62, 0.045)),
+    rgba(8, 8, 8, 0.38);
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   line-height: 1.35;
 }
 
 .proof-markers strong {
+  display: block;
   color: var(--accent);
   font-family: var(--font-display);
-  font-size: clamp(1.35rem, 2.3vw, 2.3rem);
-  line-height: 1;
+  font-size: clamp(1.65rem, 3vw, 3rem);
+  line-height: 0.98;
 }
 
 .eyebrow {
@@ -495,14 +498,15 @@ summary:focus-visible,
 }
 
 blockquote {
-  margin: 36px 0 0;
-  padding-left: 24px;
+  margin: 34px 0 0;
+  padding-left: 22px;
   border-left: 2px solid var(--accent);
-  color: var(--text);
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(1.55rem, 3vw, 2.5rem);
-  line-height: 1.18;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: clamp(1.08rem, 1.8vw, 1.42rem);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.45;
 }
 
 .image-panel {
@@ -551,19 +555,19 @@ blockquote {
   display: block;
   color: var(--accent);
   font-family: var(--font-display);
-  font-size: clamp(1.55rem, 3vw, 3rem);
+  font-size: clamp(1.45rem, 2.6vw, 2.65rem);
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.02;
 }
 
 .stat-card span {
   display: block;
-  margin-top: 10px;
+  margin-top: 12px;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -617,6 +621,10 @@ blockquote {
 .proof-section .stat-grid {
   margin-top: 52px;
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.proof-section .stat-card {
+  min-height: 138px;
 }
 
 .image-grid {
@@ -693,6 +701,24 @@ blockquote {
   max-width: 760px;
 }
 
+.vision-section .feature-grid {
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 154, 62, 0.18);
+  border-radius: 8px;
+  background: rgba(201, 154, 62, 0.18);
+}
+
+.vision-section .feature-card {
+  min-height: 210px;
+  border: 0;
+  border-radius: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(13, 12, 11, 0.92);
+  box-shadow: none;
+}
+
 .poster-card {
   display: grid;
   position: relative;
@@ -740,23 +766,29 @@ blockquote {
 }
 
 .planned-format {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
   margin-top: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.11);
 }
 
 .planned-format span {
-  padding: 9px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  border-radius: 999px;
-  background: rgba(8, 8, 8, 0.26);
-  color: var(--muted);
+  display: flex;
+  min-height: 78px;
+  align-items: center;
+  padding: 16px;
+  background: rgba(8, 8, 8, 0.42);
+  color: var(--text);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  text-transform: none;
 }
 
 .partner-columns {
@@ -952,6 +984,10 @@ blockquote {
   .credibility-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .planned-format {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 720px) {
@@ -1065,6 +1101,10 @@ blockquote {
 
   .stat-grid,
   .proof-section .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planned-format {
     grid-template-columns: 1fr;
   }
 

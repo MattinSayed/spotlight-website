@@ -5,7 +5,7 @@ const { items = [] } = Astro.props;
 <div class="feature-grid">
   {items.map((item) => (
     <article class="feature-card">
-      <span class="feature-kicker">{item.kicker}</span>
+      {item.kicker && <span class="feature-kicker">{item.kicker}</span>}
       <h3>{item.title}</h3>
       <p>{item.text}</p>
     </article>

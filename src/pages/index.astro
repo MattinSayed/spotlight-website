@@ -12,24 +12,24 @@ const heroStats = [
 ];
 
 const editionStats = [
-  { value: "17", label: "curated dance short films" },
-  { value: "30+", label: "international submissions" },
-  { value: "5", label: "continents" },
-  { value: "80", label: "visitors" },
-  { value: "2 hrs", label: "cinema program" },
-  { value: "Sold out", label: "with additional waiting list" }
+  { value: "17 curated films", label: "final program" },
+  { value: "30+ submissions", label: "international entries" },
+  { value: "5 continents", label: "represented" },
+  { value: "80 visitors", label: "in the cinema" },
+  { value: "Additional waiting list", label: "extra demand" },
+  { value: "Two-hour program", label: "cinema screening" }
 ];
 
 const aboutCards = [
-  { kicker: "01", title: "Movement-Based Storytelling", text: "A platform for works where movement, camera, sound, editing, and space become one cinematic language." },
-  { kicker: "02", title: "Cinema Attention", text: "A focused space for films that often live online or circulate inside smaller creative communities." },
-  { kicker: "03", title: "Creative Exchange", text: "A meeting point for dancers, filmmakers, choreographers, musicians, visual artists, and curious audiences." }
+  { title: "Movement-Based Storytelling", text: "A platform for projects where movement, camera, sound, editing, and space become one cinematic language." },
+  { title: "Cinema Attention", text: "A focused setting for dance films that often live online or circulate inside smaller creative communities." },
+  { title: "Creative Exchange", text: "A meeting point for dancers, filmmakers, choreographers, musicians, visual artists, and curious audiences." }
 ];
 
 const visionCards = [
-  { kicker: "Spring", title: "2027 Edition", text: "A larger one-day cinema event in Frankfurt am Main, currently in preparation." },
-  { kicker: "Program", title: "Hosted Festival Format", text: "Curated film blocks with hosting, moderation, interviews, awards, documentation, and community exchange." },
-  { kicker: "Growth", title: "Recurring Platform", text: "A long-term vision for a regular Frankfurt-based platform for dance film and interdisciplinary exchange." }
+  { kicker: "Up Next", title: "Spring 2027", text: "A larger one-day cinema event in Frankfurt am Main, currently in preparation." },
+  { kicker: "Target", title: "Approx. 200-300 Seats", text: "SPOTLIGHT is currently exploring a professional cinema setting with a larger target capacity." },
+  { kicker: "Experience", title: "Hosted Festival Format", text: "Curated film blocks with hosting, moderation, awards, interviews, documentation, and community exchange." }
 ];
 
 const partnerCards = [
@@ -46,15 +46,11 @@ const gallery = [
 ];
 
 const plannedFormat = [
-  "Spring 2027 planned",
-  "Target capacity around 250 visitors",
-  "Approx. 200-300 visitor range",
+  "Target capacity: approx. 200-300 seats",
   "Curated film blocks",
   "Hosting and moderation",
-  "Red carpet interviews",
-  "Awards",
+  "Awards and interviews",
   "Photo/video documentation",
-  "Social media and local press visibility",
   "Community exchange"
 ];
 
@@ -65,7 +61,7 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
 
 <BaseLayout>
   <section id="home" class="hero-section">
-    <img class="hero-image" src="/images/hero-cinema-stage.jpg" alt="SPOTLIGHT first edition stage at MalSehn cinema with artists, audience members, and the festival logo projected on screen." width="2400" height="1800" fetchpriority="high" decoding="async" />
+    <img class="hero-image" src="/images/hero-cinema-stage.jpg" alt="SPOTLIGHT first edition stage at a Frankfurt cinema with artists, audience members, and the festival logo projected on screen." width="2400" height="1800" fetchpriority="high" decoding="async" />
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="eyebrow">Frankfurt am Main, Germany · Spring 2027 in preparation</p>
@@ -87,10 +83,11 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
     </div>
     <div class="editorial-grid">
       <div class="copy">
-        <p>SPOTLIGHT Dance Film Festival brings dance film and movement-based visual storytelling into the cinema. We create a shared space where works that often live online can be experienced with full attention: on the big screen, together with an audience.</p>
+        <p>SPOTLIGHT Dance Film Festival brings dance film and movement-based visual storytelling into the cinema. SPOTLIGHT creates a shared space where dance films and movement-based projects can be experienced with full attention: on the big screen, together with an audience.</p>
+        <p>In a time where many creative works are consumed quickly through social media feeds, dance film can disappear into the speed of scrolling. SPOTLIGHT was created as a counterpoint to that: a physical space where movement-based projects are not just watched in passing, but experienced with attention, sound, scale, and community.</p>
         <p>The festival connects dancers, filmmakers, choreographers, musicians, visual artists, and audiences who are curious about new forms of storytelling. It is a meeting point where creative disciplines overlap, people connect, and new ideas can grow.</p>
         <p>Dance can express identity, create atmosphere, and communicate what words sometimes cannot. Through film, movement, camera, sound, editing, and space come together as a cinematic experience.</p>
-        <blockquote>Dance film deserves to be experienced collectively — on the big screen, with full attention.</blockquote>
+        <blockquote>Dance film deserves to be experienced collectively: on the big screen, with full attention.</blockquote>
       </div>
       <div class="image-panel">
         <img src="/images/spotlight-projection.jpg" alt="The SPOTLIGHT logo projected warmly across a cinema screen." width="1200" height="1600" loading="lazy" decoding="async" />
@@ -106,12 +103,13 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
       </div>
       <div class="copy">
         <p class="eyebrow">First Edition — March 2026</p>
-        <h2>A sold-out first edition at MalSehn cinema.</h2>
+        <h2>A sold-out first edition at a cinema in Frankfurt am Main.</h2>
         <div class="proof-markers" aria-label="First edition key proof points">
           <span><strong>Sold out</strong> 80 visitors plus waiting list</span>
           <span><strong>17 curated films</strong> selected from 30+ submissions</span>
         </div>
-        <p>The first edition of SPOTLIGHT took place in March 2026 at MalSehn cinema in Frankfurt am Main. The festival presented a two-hour program of 17 international dance short films and brought together dancers, filmmakers, artists, international guests, and a local creative audience.</p>
+        <!-- TODO: Confirm exact official spelling of the 2026 cinema name before final public use. -->
+        <p>The first edition of SPOTLIGHT took place in March 2026 at a cinema in Frankfurt am Main. The festival presented a two-hour program of 17 international dance short films and brought together dancers, filmmakers, artists, international guests, and a local creative audience.</p>
         <p>More than 30 films from five continents were submitted. From these submissions, 17 films were selected for the final program.</p>
         <p>The event was completely sold out with 80 visitors and an additional waiting list, showing a strong demand for a dedicated dance film platform in Frankfurt.</p>
       </div>
