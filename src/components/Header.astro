@@ -11,8 +11,13 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
 
 <header class="site-header" aria-label="Primary navigation">
   <a class="brand" href="#home" aria-label="SPOTLIGHT home">
-    <span class="brand-mark"></span>
-    <span>SPOTLIGHT</span>
+    <img
+      class="brand-logo"
+      src="/images/spotlight-logo-header.png"
+      width="1200"
+      height="411"
+      alt="SPOTLIGHT"
+    />
   </a>
   <nav class="desktop-nav">
     {links.map(([label, href]) => <a href={href}>{label}</a>)}
