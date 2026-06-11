@@ -620,11 +620,21 @@ blockquote {
 
 .proof-section .stat-grid {
   margin-top: 52px;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .proof-section .stat-card {
-  min-height: 138px;
+  min-height: 150px;
+  padding: clamp(22px, 2.5vw, 30px);
+}
+
+.proof-section .stat-card strong {
+  max-width: 11ch;
+  font-size: clamp(1.8rem, 3.2vw, 3.1rem);
+}
+
+.proof-section .stat-card span {
+  max-width: 22ch;
 }
 
 .image-grid {
@@ -765,32 +775,6 @@ blockquote {
   line-height: 0.9;
 }
 
-.planned-format {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1px;
-  overflow: hidden;
-  margin-top: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.11);
-}
-
-.planned-format span {
-  display: flex;
-  min-height: 78px;
-  align-items: center;
-  padding: 16px;
-  background: rgba(8, 8, 8, 0.42);
-  color: var(--text);
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  line-height: 1.35;
-  text-transform: none;
-}
-
 .partner-columns {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -815,31 +799,6 @@ blockquote {
 
 .partner-columns p {
   margin: 0;
-}
-
-.credibility-strip {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  overflow: hidden;
-  margin-top: 18px;
-  border: 1px solid rgba(201, 154, 62, 0.22);
-  border-radius: 8px;
-  background: rgba(201, 154, 62, 0.16);
-}
-
-.credibility-strip span {
-  display: flex;
-  min-height: 74px;
-  align-items: center;
-  padding: 18px;
-  background: rgba(14, 13, 12, 0.92);
-  color: var(--text);
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .cta-band {
@@ -981,13 +940,6 @@ blockquote {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .credibility-strip {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .planned-format {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 720px) {
@@ -1077,10 +1029,6 @@ blockquote {
     flex-direction: column;
   }
 
-  .hero-content .button-row {
-    margin-top: 20px;
-  }
-
   .button {
     width: 100%;
   }
@@ -1104,10 +1052,6 @@ blockquote {
     grid-template-columns: 1fr;
   }
 
-  .planned-format {
-    grid-template-columns: 1fr;
-  }
-
   .proof-markers {
     grid-template-columns: 1fr;
   }
@@ -1126,14 +1070,6 @@ blockquote {
 
   .poster-card {
     min-height: 330px;
-  }
-
-  .credibility-strip {
-    grid-template-columns: 1fr;
-  }
-
-  .credibility-strip span {
-    min-height: 60px;
   }
 
   .site-footer {

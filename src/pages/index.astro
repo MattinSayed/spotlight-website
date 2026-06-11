@@ -45,15 +45,6 @@ const gallery = [
   { src: "/images/venue-last-year-professional.jpg", width: 1350, height: 1800, alt: "Cinema auditorium with rows of seats and the SPOTLIGHT logo projected on the screen before the first edition.", caption: "Cinema venue before the screening" }
 ];
 
-const plannedFormat = [
-  "Target capacity: approx. 200-300 seats",
-  "Curated film blocks",
-  "Hosting and moderation",
-  "Awards and interviews",
-  "Photo/video documentation",
-  "Community exchange"
-];
-
 const team = ["Isi Dyson", "Mattin Sayed", "Samuil Rahman", "Tizian Arnholdt"];
 const contactEmail = "spotlight.filmfestival.germany@gmail.com";
 const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrMG91YmRsbWw2bw==";
@@ -69,9 +60,6 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
       <p class="hero-lede">An independent dance film festival based in Frankfurt am Main, bringing movement-based visual storytelling to the big screen.</p>
       <div class="hero-stats">
         <StatGrid stats={heroStats} />
-      </div>
-      <div class="button-row">
-        <a class="button primary" href="#about">Explore the festival</a>
       </div>
     </div>
   </section>
@@ -133,9 +121,6 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
       </div>
     </div>
     <FeatureCards items={visionCards} />
-    <div class="planned-format" aria-label="Planned 2027 format">
-      {plannedFormat.map((item) => <span>{item}</span>)}
-    </div>
   </section>
 
   <section id="partners" class="section partners-section">
@@ -165,12 +150,6 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
         <h3>Venue Direction</h3>
         <p>The next edition is planned for a professional cinema environment in Frankfurt am Main. SPOTLIGHT is currently exploring suitable cinema and cultural venue partnerships for spring 2027.</p>
       </article>
-    </div>
-    <div class="credibility-strip" aria-label="Partner-facing credibility points">
-      <span>Real cinema event</span>
-      <span>International submissions</span>
-      <span>Local creative audience</span>
-      <span>Conservative public reach wording</span>
     </div>
     <div class="cta-band">
       <div>
