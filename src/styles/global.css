@@ -398,24 +398,6 @@ summary:focus-visible,
   color: #080808;
 }
 
-.button.secondary {
-  border-color: rgba(201, 154, 62, 0.44);
-  color: var(--accent);
-}
-
-.button.secondary:hover,
-.button.secondary:focus-visible,
-.button.ghost:hover,
-.button.ghost:focus-visible {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: #080808;
-}
-
-.button.ghost {
-  color: var(--text);
-}
-
 .hero-stats {
   position: relative;
   z-index: 1;
