@@ -89,7 +89,9 @@ h3 {
   font-weight: 700;
 }
 
-ul {
+ul,
+dl,
+dd {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -433,12 +435,12 @@ summary:focus-visible,
   background: rgba(8, 8, 8, 0.66);
 }
 
-.hero-stats .stat-card strong {
+.hero-stats .stat-card dt {
   font-size: clamp(1.75rem, 2.8vw, 3.1rem);
   line-height: 0.98;
 }
 
-.hero-stats .stat-card span {
+.hero-stats .stat-card dd {
   margin-top: 14px;
   font-size: clamp(0.72rem, 0.9vw, 0.92rem);
   letter-spacing: 0.05em;
@@ -551,7 +553,7 @@ blockquote {
     rgba(25, 23, 21, 0.9);
 }
 
-.stat-card strong {
+.stat-card dt {
   display: block;
   color: var(--accent);
   font-family: var(--font-display);
@@ -560,7 +562,7 @@ blockquote {
   line-height: 1.02;
 }
 
-.stat-card span {
+.stat-card dd {
   display: block;
   margin-top: 12px;
   color: var(--muted);
@@ -628,12 +630,12 @@ blockquote {
   padding: clamp(22px, 2.5vw, 30px);
 }
 
-.proof-section .stat-card strong {
+.proof-section .stat-card dt {
   max-width: 11ch;
   font-size: clamp(1.8rem, 3.2vw, 3.1rem);
 }
 
-.proof-section .stat-card span {
+.proof-section .stat-card dd {
   max-width: 22ch;
 }
 
@@ -1065,11 +1067,11 @@ blockquote {
     padding: 16px;
   }
 
-  .hero-stats .stat-card strong {
+  .hero-stats .stat-card dt {
     font-size: clamp(1.28rem, 6.5vw, 1.75rem);
   }
 
-  .hero-stats .stat-card span {
+  .hero-stats .stat-card dd {
     margin-top: 10px;
     font-size: 0.68rem;
     line-height: 1.25;
