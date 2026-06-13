@@ -98,10 +98,6 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
     </div>
   </section>
 
-  <section class="section trailer-bridge">
-    <VideoEmbed {...videos.trailer} />
-  </section>
-
   <section id="about" class="section editorial-section">
     <div class="section-heading">
       <p class="eyebrow">About</p>
@@ -115,9 +111,7 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
         <p>Dance can express identity, create atmosphere, and communicate what words sometimes cannot. Through film, movement, camera, sound, editing, and space come together as a cinematic experience.</p>
         <blockquote>Dance film deserves to be experienced collectively: on the big screen, with full attention.</blockquote>
       </div>
-      <div class="image-panel">
-        <img src="/images/spotlight-projection.jpg" alt="The SPOTLIGHT logo projected warmly across a cinema screen." width="1200" height="1600" loading="lazy" decoding="async" />
-      </div>
+      <VideoEmbed {...videos.trailer} variant="compact" headingTag="h3" />
     </div>
     <FeatureCards items={aboutCards} />
   </section>

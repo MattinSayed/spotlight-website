@@ -455,13 +455,6 @@ summary:focus-visible,
   font-size: 1.08rem;
 }
 
-.trailer-bridge {
-  padding-top: clamp(46px, 7vw, 90px);
-  padding-bottom: clamp(74px, 10vw, 120px);
-  background:
-    linear-gradient(180deg, var(--bg) 0%, #0d0c0b 100%);
-}
-
 .video-feature {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(220px, 360px);
@@ -1281,11 +1274,6 @@ blockquote {
 
   .poster-card {
     min-height: 330px;
-  }
-
-  .trailer-bridge {
-    padding-top: 56px;
-    padding-bottom: 70px;
   }
 
   .video-feature {
