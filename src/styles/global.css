@@ -629,7 +629,6 @@ summary:focus-visible,
   max-width: 430px;
 }
 
-.editorial-grid,
 .split-layout,
 .contact-grid,
 .vision-card {
@@ -1154,7 +1153,6 @@ blockquote {
   }
 
   .about-layout,
-  .editorial-grid,
   .split-layout,
   .contact-grid,
   .vision-card,
@@ -1291,6 +1289,10 @@ blockquote {
 
   .section {
     padding: 72px 18px;
+  }
+
+  .about-layout {
+    gap: 34px;
   }
 
   .hero-content p {
