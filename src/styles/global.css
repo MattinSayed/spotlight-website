@@ -596,6 +596,14 @@ summary:focus-visible,
     linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
 }
 
+.editorial-section .section-heading {
+  max-width: var(--max-page);
+}
+
+.editorial-section .section-heading h2 {
+  max-width: 920px;
+}
+
 .editorial-grid,
 .split-layout,
 .contact-grid,
