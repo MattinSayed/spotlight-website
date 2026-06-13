@@ -468,8 +468,8 @@ summary:focus-visible,
   align-self: start;
   justify-self: center;
   gap: 14px;
-  width: min(100%, 380px);
-  max-width: 380px;
+  width: min(100%, 400px);
+  max-width: 400px;
   padding: 16px;
   border: 1px solid rgba(201, 154, 62, 0.2);
   border-radius: 8px;
@@ -552,7 +552,7 @@ summary:focus-visible,
 }
 
 .video-feature--compact .video-card {
-  width: min(100%, 240px);
+  width: min(100%, 280px);
   order: -1;
   padding: 8px;
   box-shadow: none;
@@ -1159,8 +1159,8 @@ blockquote {
   }
 
   .video-feature--compact {
-    width: min(100%, 380px);
-    max-width: 380px;
+    width: min(100%, 400px);
+    max-width: 400px;
   }
 
   .video-feature--tile {
@@ -1315,7 +1315,7 @@ blockquote {
   }
 
   .video-feature--compact .video-card {
-    width: min(100%, 240px);
+    width: min(100%, 270px);
   }
 
   .video-feature--tile {
