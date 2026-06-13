@@ -43,7 +43,7 @@ const videos = {
   trailer: {
     title: "SPOTLIGHT 2026 Trailer",
     label: "Trailer",
-    description: "A glimpse into the films, atmosphere, and movement behind SPOTLIGHT.",
+    description: "A first glimpse into the films, atmosphere, and movement behind SPOTLIGHT.",
     youtubeId: "jhz3F1b8FPk",
     fallbackUrl: "https://youtube.com/shorts/jhz3F1b8FPk?feature=share"
   },
@@ -96,7 +96,7 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
     </div>
   </section>
 
-  <section class="section video-section">
+  <section class="section trailer-bridge">
     <VideoEmbed {...videos.trailer} />
   </section>
 
@@ -113,12 +113,9 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
         <p>Dance can express identity, create atmosphere, and communicate what words sometimes cannot. Through film, movement, camera, sound, editing, and space come together as a cinematic experience.</p>
         <blockquote>Dance film deserves to be experienced collectively: on the big screen, with full attention.</blockquote>
       </div>
-      <div class="image-panel">
-        <img src="/images/spotlight-projection.jpg" alt="The SPOTLIGHT logo projected warmly across a cinema screen." width="1200" height="1600" loading="lazy" decoding="async" />
-      </div>
+      <VideoEmbed {...videos.teamInterview} variant="compact" />
     </div>
     <FeatureCards items={aboutCards} />
-    <VideoEmbed {...videos.teamInterview} />
   </section>
 
   <section id="edition-2026" class="section proof-section">
@@ -138,8 +135,12 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
         <p>The event was completely sold out with 80 visitors and an additional waiting list, showing a strong demand for a dedicated dance film platform in Frankfurt.</p>
       </div>
     </div>
-    <StatGrid stats={editionStats} />
-    <VideoEmbed {...videos.recap} />
+    <div class="proof-media-row">
+      <div class="proof-stats-wrap">
+        <StatGrid stats={editionStats} />
+      </div>
+      <VideoEmbed {...videos.recap} variant="compact" />
+    </div>
     <ImageGrid images={gallery} />
   </section>
 
@@ -157,8 +158,10 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
         <small>Frankfurt am Main</small>
       </div>
     </div>
-    <FeatureCards items={visionCards} />
-    <VideoEmbed {...videos.audience} />
+    <div class="vision-media-row">
+      <FeatureCards items={visionCards} />
+      <VideoEmbed {...videos.audience} variant="compact" />
+    </div>
   </section>
 
   <section id="partners" class="section partners-section">

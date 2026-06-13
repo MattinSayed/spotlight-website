@@ -5,13 +5,15 @@ const {
   youtubeId,
   fallbackUrl,
   label,
-  aspectRatio = "9 / 16"
+  aspectRatio = "9 / 16",
+  variant = "feature"
 } = Astro.props;
 
 const embedUrl = `https://www.youtube.com/embed/${youtubeId}`;
+const className = `video-feature video-feature--${variant}`;
 ---
 
-<article class="video-feature" style={`--video-aspect: ${aspectRatio};`}>
+<article class={className} style={`--video-aspect: ${aspectRatio};`}>
   <div class="video-copy">
     {label && <p class="video-label">{label}</p>}
     <h2 class="video-title">{title}</h2>
