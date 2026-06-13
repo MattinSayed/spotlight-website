@@ -1,0 +1,33 @@
+---
+const {
+  title,
+  description,
+  youtubeId,
+  fallbackUrl,
+  label,
+  aspectRatio = "9 / 16"
+} = Astro.props;
+
+const embedUrl = `https://www.youtube.com/embed/${youtubeId}`;
+---
+
+<article class="video-feature" style={`--video-aspect: ${aspectRatio};`}>
+  <div class="video-copy">
+    {label && <p class="video-label">{label}</p>}
+    <h2 class="video-title">{title}</h2>
+    <p>{description}</p>
+    <a class="video-link" href={fallbackUrl} target="_blank" rel="noopener noreferrer">Open video on YouTube</a>
+  </div>
+  <div class="video-card">
+    <div class="video-frame">
+      <iframe
+        src={embedUrl}
+        title={title}
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    </div>
+  </div>
+</article>

@@ -53,4 +53,4 @@ Planning files live in `project_brief/` and `references/`.
 
 Original source assets remain untouched in `source-assets/`. Selected web-ready copies are stored in `public/images/`.
 
-Future poster or image assets should be optimized for the web before being added to `public/images/`. Video files should be externally hosted or kept outside the deployed static site unless a future pass explicitly prepares web-ready embeds.
+Future poster or image assets should be optimized for the web before being added to `public/images/`. Videos are hosted externally on YouTube as unlisted Shorts and embedded via iframe. Do not commit local video files to the repository.

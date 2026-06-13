@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import StatGrid from "../components/StatGrid.astro";
 import FeatureCards from "../components/FeatureCards.astro";
 import ImageGrid from "../components/ImageGrid.astro";
+import VideoEmbed from "../components/VideoEmbed.astro";
 
 const heroStats = [
   { value: "March 2026", label: "first edition" },
@@ -38,6 +39,37 @@ const partnerCards = [
   { kicker: "Audience", title: "Who It Reaches", text: "While SPOTLIGHT is rooted in Frankfurt's creative scene, the festival also attracts artists, guests, and audiences from outside the city through its international film selection and wider creative network." }
 ];
 
+const videos = {
+  trailer: {
+    title: "SPOTLIGHT 2026 Trailer",
+    label: "Trailer",
+    description: "A glimpse into the films, atmosphere, and movement behind SPOTLIGHT.",
+    youtubeId: "jhz3F1b8FPk",
+    fallbackUrl: "https://youtube.com/shorts/jhz3F1b8FPk?feature=share"
+  },
+  teamInterview: {
+    title: "Interview with the Team",
+    label: "Behind the Festival",
+    description: "The team behind SPOTLIGHT on the idea, vision, and need for a shared cinema space for dance film.",
+    youtubeId: "YhKXewGph2w",
+    fallbackUrl: "https://youtube.com/shorts/YhKXewGph2w?feature=share"
+  },
+  recap: {
+    title: "Recap 2026",
+    label: "First Edition",
+    description: "Moments from the first SPOTLIGHT edition in March 2026.",
+    youtubeId: "Q5Ac-L7uT48",
+    fallbackUrl: "https://youtube.com/shorts/Q5Ac-L7uT48?feature=share"
+  },
+  audience: {
+    title: "Audience Impressions",
+    label: "Community Voices",
+    description: "Voices from the audience on the value of experiencing dance film together in a cinema setting.",
+    youtubeId: "v3egn-RsB-E",
+    fallbackUrl: "https://youtube.com/shorts/v3egn-RsB-E?feature=share"
+  }
+};
+
 const gallery = [
   { src: "/images/first-edition-group.jpg", width: 2200, height: 1650, alt: "Artists and filmmakers gathered on stage in front of the SPOTLIGHT projection after the first edition.", caption: "First edition artists and filmmakers" },
   { src: "/images/audience-last-year-professional.jpg", width: 1800, height: 1350, alt: "Audience members watching the SPOTLIGHT first edition inside the cinema while speakers stand near the projected festival logo.", caption: "Audience at the 2026 screening" },
@@ -64,6 +96,10 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
     </div>
   </section>
 
+  <section class="section video-section">
+    <VideoEmbed {...videos.trailer} />
+  </section>
+
   <section id="about" class="section editorial-section">
     <div class="section-heading">
       <p class="eyebrow">About</p>
@@ -82,6 +118,7 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
       </div>
     </div>
     <FeatureCards items={aboutCards} />
+    <VideoEmbed {...videos.teamInterview} />
   </section>
 
   <section id="edition-2026" class="section proof-section">
@@ -102,6 +139,7 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
       </div>
     </div>
     <StatGrid stats={editionStats} />
+    <VideoEmbed {...videos.recap} />
     <ImageGrid images={gallery} />
   </section>
 
@@ -120,6 +158,7 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
       </div>
     </div>
     <FeatureCards items={visionCards} />
+    <VideoEmbed {...videos.audience} />
   </section>
 
   <section id="partners" class="section partners-section">
