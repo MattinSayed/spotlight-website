@@ -467,10 +467,10 @@ summary:focus-visible,
   flex-direction: column;
   align-self: start;
   justify-self: center;
-  gap: 12px;
-  width: min(100%, 300px);
-  max-width: 300px;
-  padding: 12px;
+  gap: 14px;
+  width: min(100%, 380px);
+  max-width: 380px;
+  padding: 16px;
   border: 1px solid rgba(201, 154, 62, 0.2);
   border-radius: 8px;
   background:
@@ -552,7 +552,7 @@ summary:focus-visible,
 }
 
 .video-feature--compact .video-card {
-  width: min(100%, 220px);
+  width: min(100%, 240px);
   order: -1;
   padding: 8px;
   box-shadow: none;
@@ -1159,8 +1159,8 @@ blockquote {
   }
 
   .video-feature--compact {
-    width: min(100%, 320px);
-    max-width: 320px;
+    width: min(100%, 380px);
+    max-width: 380px;
   }
 
   .video-feature--tile {
@@ -1306,8 +1306,8 @@ blockquote {
   }
 
   .video-feature--compact {
-    width: min(100%, 300px);
-    padding: 12px;
+    width: min(100%, 340px);
+    padding: 14px;
   }
 
   .video-card {
@@ -1315,7 +1315,7 @@ blockquote {
   }
 
   .video-feature--compact .video-card {
-    width: min(100%, 220px);
+    width: min(100%, 240px);
   }
 
   .video-feature--tile {
