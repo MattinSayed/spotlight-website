@@ -70,6 +70,8 @@ const videos = {
   }
 };
 
+const festivalMoments = [videos.teamInterview, videos.recap, videos.audience];
+
 const gallery = [
   { src: "/images/first-edition-group.jpg", width: 2200, height: 1650, alt: "Artists and filmmakers gathered on stage in front of the SPOTLIGHT projection after the first edition.", caption: "First edition artists and filmmakers" },
   { src: "/images/audience-last-year-professional.jpg", width: 1800, height: 1350, alt: "Audience members watching the SPOTLIGHT first edition inside the cinema while speakers stand near the projected festival logo.", caption: "Audience at the 2026 screening" },
@@ -113,7 +115,9 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
         <p>Dance can express identity, create atmosphere, and communicate what words sometimes cannot. Through film, movement, camera, sound, editing, and space come together as a cinematic experience.</p>
         <blockquote>Dance film deserves to be experienced collectively: on the big screen, with full attention.</blockquote>
       </div>
-      <VideoEmbed {...videos.teamInterview} variant="compact" />
+      <div class="image-panel">
+        <img src="/images/spotlight-projection.jpg" alt="The SPOTLIGHT logo projected warmly across a cinema screen." width="1200" height="1600" loading="lazy" decoding="async" />
+      </div>
     </div>
     <FeatureCards items={aboutCards} />
   </section>
@@ -135,13 +139,21 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
         <p>The event was completely sold out with 80 visitors and an additional waiting list, showing a strong demand for a dedicated dance film platform in Frankfurt.</p>
       </div>
     </div>
-    <div class="proof-media-row">
-      <div class="proof-stats-wrap">
-        <StatGrid stats={editionStats} />
-      </div>
-      <VideoEmbed {...videos.recap} variant="compact" />
-    </div>
+    <StatGrid stats={editionStats} />
     <ImageGrid images={gallery} />
+  </section>
+
+  <section class="section moments-section" aria-labelledby="festival-moments-title">
+    <div class="section-heading">
+      <p class="eyebrow">Festival Moments</p>
+      <h2 id="festival-moments-title">Voices, atmosphere, and first impressions.</h2>
+      <p>Short video impressions from the first SPOTLIGHT edition and the people behind it.</p>
+    </div>
+    <div class="video-moments-grid">
+      {festivalMoments.map((video) => (
+        <VideoEmbed {...video} variant="tile" headingTag="h3" />
+      ))}
+    </div>
   </section>
 
   <section id="vision-2027" class="section vision-section">
@@ -158,10 +170,7 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
         <small>Frankfurt am Main</small>
       </div>
     </div>
-    <div class="vision-media-row">
-      <FeatureCards items={visionCards} />
-      <VideoEmbed {...videos.audience} variant="compact" />
-    </div>
+    <FeatureCards items={visionCards} />
   </section>
 
   <section id="partners" class="section partners-section">
