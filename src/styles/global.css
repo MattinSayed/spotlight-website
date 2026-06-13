@@ -830,6 +830,11 @@ blockquote {
 
 .moments-section .section-heading {
   max-width: 780px;
+  text-align: center;
+}
+
+.moments-section .section-heading p {
+  margin-inline: auto;
 }
 
 .video-moments-grid {
