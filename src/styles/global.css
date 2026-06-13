@@ -598,10 +598,15 @@ summary:focus-visible,
 
 .editorial-section .section-heading {
   max-width: var(--max-page);
+  margin-bottom: clamp(22px, 3vw, 34px);
 }
 
 .editorial-section .section-heading h2 {
   max-width: 920px;
+}
+
+.editorial-section .editorial-grid {
+  align-items: start;
 }
 
 .editorial-grid,
