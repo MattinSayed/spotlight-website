@@ -466,9 +466,9 @@ summary:focus-visible,
   display: flex;
   flex-direction: column;
   align-self: start;
-  gap: 18px;
-  max-width: 390px;
-  padding: 18px;
+  gap: 14px;
+  max-width: 340px;
+  padding: 14px;
   border: 1px solid rgba(201, 154, 62, 0.2);
   border-radius: 8px;
   background:
@@ -546,7 +546,7 @@ summary:focus-visible,
 }
 
 .video-feature--compact .video-card {
-  width: min(100%, 300px);
+  width: min(100%, 260px);
   order: -1;
   padding: 8px;
   box-shadow: none;
@@ -705,8 +705,8 @@ blockquote {
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 42px;
+  gap: 16px;
+  margin-top: 34px;
 }
 
 .feature-card,
@@ -720,8 +720,8 @@ blockquote {
 }
 
 .feature-card {
-  min-height: 238px;
-  padding: 26px;
+  min-height: 0;
+  padding: clamp(20px, 2.2vw, 24px);
   box-shadow: 0 22px 54px rgba(0, 0, 0, 0.18);
 }
 
@@ -1148,12 +1148,14 @@ blockquote {
   }
 
   .video-feature--compact {
-    max-width: none;
+    justify-self: center;
+    width: min(100%, 420px);
+    max-width: 420px;
   }
 
   .video-feature--tile {
     display: grid;
-    grid-template-columns: minmax(180px, 280px) minmax(0, 1fr);
+    grid-template-columns: minmax(160px, 240px) minmax(0, 1fr);
     align-items: center;
   }
 
@@ -1294,15 +1296,16 @@ blockquote {
   }
 
   .video-feature--compact {
-    padding: 14px;
+    width: min(100%, 340px);
+    padding: 12px;
   }
 
   .video-card {
-    width: min(100%, 310px);
+    width: min(100%, 300px);
   }
 
   .video-feature--compact .video-card {
-    width: min(100%, 290px);
+    width: min(100%, 250px);
   }
 
   .video-feature--tile {
@@ -1310,7 +1313,7 @@ blockquote {
   }
 
   .video-feature--tile .video-card {
-    width: min(100%, 290px);
+    width: min(100%, 270px);
   }
 
   .site-footer {
