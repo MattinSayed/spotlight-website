@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import StatGrid from "../components/StatGrid.astro";
 import FeatureCards from "../components/FeatureCards.astro";
 import ImageGrid from "../components/ImageGrid.astro";
+import PosterGallery from "../components/PosterGallery.astro";
 import VideoEmbed from "../components/VideoEmbed.astro";
 
 const heroStats = [
@@ -79,6 +80,16 @@ const gallery = [
   { src: "/images/venue-last-year-professional.jpg", width: 1350, height: 1800, alt: "Cinema auditorium with rows of seats and the SPOTLIGHT logo projected on the screen before the first edition.", caption: "Cinema venue before the screening" }
 ];
 
+const posters2026 = Array.from({ length: 17 }, (_, index) => {
+  const posterNumber = index + 1;
+  return {
+    src: `/images/posters/2026/poster-${String(posterNumber).padStart(2, "0")}.jpg`,
+    width: 1080,
+    height: 1350,
+    alt: `Poster from the SPOTLIGHT 2026 curated film program, number ${posterNumber}.`
+  };
+});
+
 const team = ["Isi Dyson", "Mattin Sayed", "Samuil Rahman", "Tizian Arnholdt"];
 const contactEmail = "spotlight.filmfestival.germany@gmail.com";
 const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrMG91YmRsbWw2bw==";
@@ -137,6 +148,7 @@ const instagramUrl = "https://www.instagram.com/spotlightfilmfestival?igsh=MTlrM
     </div>
     <StatGrid stats={editionStats} />
     <ImageGrid images={gallery} />
+    <PosterGallery posters={posters2026} />
   </section>
 
   <section class="section moments-section" aria-labelledby="festival-moments-title">

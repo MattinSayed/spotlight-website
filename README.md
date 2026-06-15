@@ -53,4 +53,6 @@ Planning files live in `project_brief/` and `references/`.
 
 Original source assets remain untouched in `source-assets/`. Selected web-ready copies are stored in `public/images/`.
 
+Poster assets for the first edition are stored in `source-assets/Posters_2026/` and displayed in the 2026 Edition section from optimized copies in `public/images/posters/2026/`.
+
 Future poster or image assets should be optimized for the web before being added to `public/images/`. Videos are hosted externally on YouTube as unlisted Shorts and embedded via iframe. Do not commit local video files to the repository.

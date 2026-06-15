@@ -1,0 +1,30 @@
+---
+const {
+  posters = [],
+  title = "Selected Films & Posters",
+  eyebrow = "2026 Film Selection",
+  description = "The first SPOTLIGHT edition presented a curated program of international dance short films. The posters below give a glimpse into the range of visual languages, stories, and movement-based works shown during the 2026 edition."
+} = Astro.props;
+---
+
+<div class="poster-gallery-block" aria-labelledby="poster-gallery-title">
+  <div class="poster-gallery-heading">
+    <p class="eyebrow">{eyebrow}</p>
+    <h2 id="poster-gallery-title">{title}</h2>
+    <p>{description}</p>
+  </div>
+  <div class="poster-grid">
+    {posters.map((poster) => (
+      <figure class="poster-item">
+        <img
+          src={poster.src}
+          alt={poster.alt}
+          width={poster.width}
+          height={poster.height}
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+    ))}
+  </div>
+</div>

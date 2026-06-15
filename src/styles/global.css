@@ -841,6 +841,49 @@ blockquote {
   backdrop-filter: blur(12px);
 }
 
+.poster-gallery-block {
+  margin-top: clamp(56px, 7vw, 86px);
+}
+
+.poster-gallery-heading {
+  max-width: 840px;
+  margin-bottom: 28px;
+}
+
+.poster-gallery-heading h2 {
+  max-width: 760px;
+}
+
+.poster-gallery-heading p:last-child {
+  max-width: 760px;
+  font-size: 1.02rem;
+}
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(10px, 1.3vw, 16px);
+}
+
+.poster-item {
+  margin: 0;
+  overflow: hidden;
+  padding: 8px;
+  border: 1px solid rgba(201, 154, 62, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+    rgba(15, 14, 13, 0.9);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+}
+
+.poster-item img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
 .moments-section {
   background:
     radial-gradient(circle at 14% 18%, rgba(201, 154, 62, 0.08), transparent 28%),
@@ -1166,6 +1209,10 @@ blockquote {
     grid-template-columns: 1fr;
   }
 
+  .poster-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .stat-grid,
   .proof-section .stat-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1314,6 +1361,19 @@ blockquote {
 
   .image-grid {
     grid-template-columns: 1fr;
+  }
+
+  .poster-gallery-block {
+    margin-top: 48px;
+  }
+
+  .poster-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .poster-item {
+    padding: 6px;
   }
 
   .image-grid figure:first-child {
